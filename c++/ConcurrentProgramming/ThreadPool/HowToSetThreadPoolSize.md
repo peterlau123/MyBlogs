@@ -10,7 +10,7 @@
 
 在此，我们先引入一个概念**Little Law**
 
-![Java-Perf-Tuning](https://tva1.sinaimg.cn/large/008i3skNgy1gqo8t6lfluj311c0u0neh.jpg)
+![Java-Perf-Tuning](./images/Little_law.png)
 
 比如系统每单位时间接收10个任务，每个任务的完成时间是2个时间单位，这个时间单位可以是ms或s。那么每个单位时间，系统会存在20个任务，这个时候最佳的情况是，系统可以启动20个线程来处理这20个任务。由于硬件本身也有支持的线程数量**N**，我们要做的就是既要能最大化利用硬件资源，又不能使得太多任务在等待中。
 
